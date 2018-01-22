@@ -1,0 +1,52 @@
+IGNORING FILES with Git
+
+Jim Bevington - Codeclan Homework Day 1
+
+----
+
+.gitignore files are placed within your repository.
+The file contains rules telling Git which files to ignore when tracking changes.
+
+For instance, the following code in your .gitignore file:
+
+  *.com
+
+will ignore all files with the .com extension
+
+However, if a file is already being tracked, inserting a new rule to ignore it
+will not work. One must untrack the file first using:
+
+  git rm --cached FILENAME
+
+GLOBAL ignore :-
+
+You can create a global ignore file for all your git repos by creating a global
+.gitignore file in your home directory. Then run the following code:
+
+  git config --global core.excludesfile ~/.gitignore_global
+
+LOCAL ignore :-
+
+If you don't wish to share an ignore rule with others accessing the repo, one
+can create files EXCLUSIVE to your repository that are not committed.
+In your repo, add rules to the file: .git/info/exclude.
+
+------
+
+RULES:-
+blank lines or after # are commments
+* stands for 0 or more characters,
+[abc] - any character inside the brackets
+? - a single character
+[0-9] - any character between 0-9
+** for nested directories, so a/**/b matches a/b, a/c/b, a/c/d/b
+
+!file - negates rule
+/folder - ignores folder in current directory, not subdir/folder
+folder/ - all files in folder
+
+------
+
+MY THOUGHTS :-
+
+not quite sure how i institute this in practice.

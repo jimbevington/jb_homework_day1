@@ -50,3 +50,4 @@ folder/ - all files in folder
 MY THOUGHTS :-
 
 not quite sure how i institute this in practice.
+didn't seem to be working, but perhaps I wrote my rules wrong
